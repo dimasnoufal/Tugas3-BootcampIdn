@@ -2,6 +2,7 @@ package com.bootcamp.tugas3_bootcampidn.news
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.bootcamp.tugas3_bootcampidn.R
 import com.bootcamp.tugas3_bootcampidn.databinding.ActivityDetailNewsBinding
 import com.bumptech.glide.Glide
 
@@ -19,6 +20,7 @@ class DetailNewsActivity : AppCompatActivity() {
 		binding.apply {
 			Glide.with(this@DetailNewsActivity)
 				.load(news.urlToImage)
+				.error(R.drawable.ic_launcher_background)
 				.into(imgNews)
 			tvJudul.text = news.title
 			tvDeskripsi.text = news.description

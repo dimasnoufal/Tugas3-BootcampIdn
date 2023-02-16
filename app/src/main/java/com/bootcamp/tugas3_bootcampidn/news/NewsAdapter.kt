@@ -5,6 +5,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bootcamp.tugas3_bootcampidn.R
 import com.bootcamp.tugas3_bootcampidn.databinding.ItemRowNewsBinding
 import com.bumptech.glide.Glide
 
@@ -23,6 +24,7 @@ class NewsAdapter(private val newsList: List<ArticlesItem>, private val context:
             binding.apply {
                 Glide.with(context)
                     .load(data.urlToImage)
+                    .error(R.drawable.ic_launcher_background)
                     .into(imgNews)
                 tvJudul.text = data.title
                 tvPenulis.text = data.author
