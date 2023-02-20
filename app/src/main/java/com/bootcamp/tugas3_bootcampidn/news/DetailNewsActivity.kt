@@ -26,9 +26,6 @@ class DetailNewsActivity : AppCompatActivity() {
 			tvDeskripsi.text = news.description
 		}
 
-//		binding.apply {
-//			imgNews.setImageResource(EXTRA_NEWS)
-//		}
 	}
 
 	companion object {

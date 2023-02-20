@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        ApiConfig().getService().getUsers().enqueue(object : Callback<NewsResponse> {
+        ApiConfig.getService().getUsers().enqueue(object : Callback<NewsResponse> {
             override fun onResponse(call: Call<NewsResponse>, response: Response<NewsResponse>) {
                 if (response.isSuccessful) {
                     val responseNews = response.body()
@@ -39,18 +39,5 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this@MainActivity, t.localizedMessage, Toast.LENGTH_SHORT).show()
             }
         })
-
-//        newsAdapter.setOnItemClickCallback(object: NewsAdapter.OnItemClickCallback {
-//            override fun onItemClicked(data: News) {
-//                Toast.makeText(this@MainActivity, "Kamu memilih detail " + data.titleNews, Toast.LENGTH_SHORT).show()
-//                val detail = Intent(this@MainActivity, DetailNewsActivity::class.java).
-//                        putExtra(DetailNewsActivity.EXTRA_NEWS, data.imgNews).
-//                        putExtra(DetailNewsActivity.EXTRA_NEWS, data.titleNews).
-//                        putExtra(DetailNewsActivity.EXTRA_NEWS, data.author).
-//                        putExtra(DetailNewsActivity.EXTRA_NEWS, data.dateNews).
-//                        putExtra(DetailNewsActivity.EXTRA_NEWS, data.description)
-//                startActivity(detail)
-//            }
-//        })
     }
 }

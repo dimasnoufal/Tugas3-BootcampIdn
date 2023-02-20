@@ -12,12 +12,6 @@ import com.bumptech.glide.Glide
 class NewsAdapter(private val newsList: List<ArticlesItem>, private val context: Context) :
     RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
 
-    private lateinit var onItemClickCallback: OnItemClickCallback
-
-    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
-        this.onItemClickCallback = onItemClickCallback
-    }
-
     inner class NewsViewHolder(private val binding: ItemRowNewsBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(data: ArticlesItem) {
@@ -33,8 +27,6 @@ class NewsAdapter(private val newsList: List<ArticlesItem>, private val context:
                     val detail = Intent(itemView.context, DetailNewsActivity::class.java).
                     putExtra(DetailNewsActivity.EXTRA_NEWS, newsList[adapterPosition])
                     itemView.context.startActivity(detail)
-//                    onItemClickCallback.onItemClicked(listBahasaPemrograman[holder.adapterPosition])
-//                    onItemClickCallback.onItemClicked(newsList[adapterPosition])
                 }
             }
         }
@@ -52,9 +44,5 @@ class NewsAdapter(private val newsList: List<ArticlesItem>, private val context:
 
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
         return holder.bind(newsList[position])
-    }
-
-    interface OnItemClickCallback {
-        fun onItemClicked(data: ArticlesItem)
     }
 }
