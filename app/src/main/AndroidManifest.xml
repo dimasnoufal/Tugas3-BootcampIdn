@@ -14,10 +14,10 @@
         android:theme="@style/Theme.Tugas3BootcampIdn"
         tools:targetApi="31">
         <activity
-            android:name=".news.DetailNewsActivity"
+            android:name=".ui.DetailNewsActivity"
             android:exported="false" />
         <activity
-            android:name=".news.MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,9 +1,10 @@
-package com.bootcamp.tugas3_bootcampidn.news
+package com.bootcamp.tugas3_bootcampidn.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bootcamp.tugas3_bootcampidn.R
 import com.bootcamp.tugas3_bootcampidn.databinding.ActivityDetailNewsBinding
+import com.bootcamp.tugas3_bootcampidn.model.news.ArticlesItem
 import com.bumptech.glide.Glide
 
 class DetailNewsActivity : AppCompatActivity() {

@@ -1,12 +1,14 @@
-package com.bootcamp.tugas3_bootcampidn.news
+package com.bootcamp.tugas3_bootcampidn.adapter
 
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bootcamp.tugas3_bootcampidn.ui.DetailNewsActivity
 import com.bootcamp.tugas3_bootcampidn.R
 import com.bootcamp.tugas3_bootcampidn.databinding.ItemRowNewsBinding
+import com.bootcamp.tugas3_bootcampidn.model.news.ArticlesItem
 import com.bumptech.glide.Glide
 
 class NewsAdapter(private val newsList: List<ArticlesItem>, private val context: Context) :
